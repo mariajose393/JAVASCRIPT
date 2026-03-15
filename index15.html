@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Repaso JavaScript II</title>
+	<style>
+	img {width: 200px; heigth:200px;}
+	.importante { color:blue; background-color:lightblue;}
+	</style>
+</head>
+<body>
+<h1 id="titulo">Título</h1>
+<h1 id="titulo2">Título</h1>
+<p>Usuario: <input id="usuario" type="text" value="Pepe"> </p>
+<img id="imagen" src="https://www.ciudad-real.es/lugares/imagenes/molinos_alcazar/grandes/Molinos_de_viento_-_Alcazar_de_San_Juan_06.jpg">
+<button onclick="cambiaImagen()">Cambia Imagen</button>
+<button onclick="cambiaValor()">Cambia Valor</button>
+<button onclick="cambiaColor()">Cambia Color</button>
+<button onclick="ocultaImagen()">Oculta Imagen</button>
+<button onclick="aplicaClase()">AplicaClase</button>
+<button onclick="nuevoHTML()">Nuevo HTML</button>
+<p>Idioma: 
+	<select id="idioma" onchange="cambiaIdioma()">
+		<option value="es">Español</option>
+		<option value="en">Inglés</option>
+    </select>
+</p>
+
+<script>
+	
+	//propiedad innerHTML
+	function cambiTitulo(){
+		let titulo= document.getElementById("titulo");
+		titulo.innerHTML = "Título NUEVO";
+	}
+
+	//atributos html: ej. src o value
+	function cambiaImagen(){
+		document.getElementById("imagen").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHXzt-gtxYEkryDWgjeyezA0ZFiR5lq0PoyA&s"
+	}
+	function cambiaValor(){
+		document.getElementById("usuario").value="admin";
+	}
+
+	//propiedades css(se pone .style)
+	function cambiaColor(){
+		let titulo = document.getElementById("titulo");
+		titulo.style.color = "red";
+		titulo.style.backgroundColor = "yellow";
+		titulo.style.fontSize = "4em";
+		titulo.style.border = "2px solid red";
+	}
+	function ocultaImagen(){
+		document.getElementById("imagen").style.display = "none";
+	}
+
+	//aplicar una clase a un elemento
+	function aplicaClase(){
+		let titulo = document.getElementById("titulo2");
+		titulo.className = "importante";
+	}
+
+	//escribir nuevo HTML
+	function nuevoHTML(){
+		document.write("<h1>Nuevo HTML</h1>")
+	}
+
+	function cambiaIdioma(){
+		let miSelect=document.getElementById("idioma");
+		let titulo=document.getElementById("titulo");
+		if (miSelect.value=="en"){
+			titulo.innerHTML="New Title"
+		} else {
+			titulo.innerHTML="Nuevo Título"
+		}
+	}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Nota media</title>
+</head>
+<body>
+	<button onclick="notamedia()">Nota Media</button>
+<script>
+	function notamedia(){
+		let numNotas = parseInt(prompt("Dime el número de notas:"));
+		let suma=0;
+		let nota;
+		for ( let i=1; i<=numNotas; i++){
+			nota = parseInt(prompt("Dime una nota:"));
+			suma = suma + nota;
+		}
+		let media = suma/numNotas;
+		alert("La nota media es "+ media);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Onblur</title>
+	<script>
+		function poneMayusculas() {
+			var nombre=document.getElementById("nombre");
+			var nombreMay=nombre.value.toLocaleUpperCase();
+			nombre.value= nombreMay;
+		}
+	</script>
+</head>
+<body>
+<form action="procesa.php">
+	<label for="nombre">Nombre:</label>
+	<input onblur="poneMayusculas()" id="nombre" type="text" name="nombre"> <br>
+	<label for="apellidos">Apellidos:</label>
+	<input id="apellidos" type="text" name="apellidos"> <br>
+	<input type="submit" value="Enviar">
+</form>
+</body>
+</html>

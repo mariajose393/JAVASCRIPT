@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejercicio muestra lista provincias</title>
+	<style>
+		*{font-family: arial;}
+
+		#provincia {
+			visibility: hidden;
+		}
+	</style>
+	<script>
+	    function muestraSelect(){
+	    	var pais = document.getElementById("pais").value;
+		    var provincia = document.getElementById("provincia");
+
+		    if (pais != "es") {
+		    	provincia.style.visibility = "hidden";
+		    }
+		    if (pais == "es"){
+			    provincia.style.visibility = "visible";
+		    }
+	    }
+	</script>
+</head>
+<body>
+<h1>Provincia de envío</h1>
+<form>
+	<label for="pais">País:</label>
+	<select id="pais" name="pais" onchange="muestraSelect()">
+		<option value="noseleccionado">Elija destino</option>
+		<option value="es">España</option>
+		<option value="po">Fuera de España</option>
+	</select>
+	<select id="provincia" name="provincia" >
+		<option value="noseleccionado">Elija provincia</option>
+		<option value="cr">Ciudad Real</option>
+		<option value="ab">Albacete</option>
+		<option value="cu">Cuenca</option>
+		<option value="to">Toledo</option>
+		<option value="gu">Guadalajara</option>	
+		<option value="ma">Madrid</option>
+		<option value="va">Valencia</option>
+		<option value="ba">Barcelona</option>	
+	</select>
+</form>
+</body>
+</html>
